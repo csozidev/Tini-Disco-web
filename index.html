@@ -3,11 +3,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tini Disco</title>
+    <link rel="stylesheet" href="./global-assets/bootstrap.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <nav>
-        <img class="small" src="./global-assets/tini_disco_icon_tr.png" alt="Logo">
+    <nav id="menu">
         <img class="big" src="./global-assets/tini_disco_logo_big.png" alt="Logo">
         <a href="#" class="active">Kezdőlap</a>
         <a href="#">Házirend</a>
@@ -170,7 +170,8 @@
             </div>
         </div>
 
-        <img src="./global-assets/tini_disco_logo_big.png" alt="">
+        <img class="pc" src="./global-assets/tini_disco_logo_big.png" alt="">
+        <img class="phone" src="./global-assets/tini_disco_icon_tr.png" alt="">
 
         <div id="more" onclick="scrollToNext()">
             <svg width="42" height="42" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -179,17 +180,32 @@
         </div>
     </div>
 
-    <div id="why">
-        <h1>Miért gyere Tini Disco-ba?</h1>
-        <div class="left">
-            <h2>Olcsó szórakozás</h2>
-            <h2>Alacsony korhatár</h2>
-        </div>
-        <div class="right">
+    <div class="container" id="about-us">
+        <h1>Rólunk</h1>
+        <p>
+            A Tini Disco 2024-ben alapult, DJ Vinyl (Tóth András), DJ BlackOut (Tábith Boldizsár), és DJ csozi (Csőke Zalán) alapításával. <br>
+            Célunk Szeged és környéke fiataljainak szórakoztatása, és a legjobb bulik szervezése. <br>
+            A Tini Disco a legjobb zenékkel, és a legjobb hangulattal várja a fiatalokat. <br>
+        </p>
+    </div>
 
+    <div class="container mt-5" id="faq">
+        <h1>Gyakran Ismételt Kérdések</h1>
+        <div class="question mt-3">
+            <div class="q"><p>Mikor lesz a következő buli?</p></div>
+            <div class="a"><p>A következő buli 2024. szeptember 20-án lesz.</p></div>
+        </div>
+        <div class="question mt-3">
+            <div class="q"><p>Mennyibe kerül a belépő?</p></div>
+            <div class="a"><p>A belépő ára 1000 Ft.</p></div>
+        </div>
+        <div class="question mt-3">
+            <div class="q"><p>Mit kell vinnem a bulira?</p></div>
+            <div class="a"><p>A bulira érkezéskor személyi igazolványt kell hozni, és a belépő árát.</p></div>
         </div>
     </div>
 
     <script src="./index-assets/index.js"></script>
+    <script src="./global-assets/bootstrap.js"></script>
 </body>
 </html>

@@ -3,6 +3,11 @@
     src: url(./global-assets/KGHAPPYSolid.ttf);
 }
 
+@font-face {
+    font-family: PoetsenOne;
+    src: url(./global-assets/PoetsenOne-Regular.ttf);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -12,6 +17,41 @@ html, body {
     background: radial-gradient(circle, rgba(44,44,44,1) 0%, rgba(15,15,15,1) 100%);
     width: 100vw;
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: KG;
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-family: KG;
+    font-size: 2rem;
+    color: white;
+}
+
+p {
+    font-family: PoetsenOne;
+    font-size: 1.5rem;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
 }
 
 /* ----- Nav ----- */
@@ -25,7 +65,7 @@ nav {
     height: 80px;
     justify-content: end;
     align-items: center;
-    gap: 12px;
+    gap: 0.8rem;
     z-index: 20000;
 }
 
@@ -121,7 +161,24 @@ nav a:hover::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: logoFloating 3s infinite ease-in-out;
+}
+
+#home .pc {
+    display: block;
+}
+
+#home .phone {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #home .pc {
+        display: none;
+    }
+    
+    #home .phone {
+        display: block;
+    }
 }
 
 #home #more {
@@ -144,6 +201,34 @@ nav a:hover::after {
 }
 
 
+
+
+
+#faq .q {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#faq .q p {
+    background-color: #00b7ff;
+    border-radius: 100px 100px 100px 10px;
+}
+
+#faq .a {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#faq .a p {
+    background-color: #8a8a8a;
+    border-radius: 100px 100px 10px 100px;
+}
+
+#faq p {
+    padding: 0 10px;
+}
 
 
 
@@ -183,6 +268,7 @@ nav a:hover::after {
         display: block;
         height: 60px;
         width: 60px;
+        scale: 0.6;
     }
     
     .hamburger input {
@@ -208,7 +294,7 @@ nav a:hover::after {
     .hamburger .bar_2 {
         height: 8px;
         border-radius: 2px;
-        width: 75%;
+        width: 100%;
         position: absolute;
         background-color: white;
         top: 25px;
@@ -219,7 +305,7 @@ nav a:hover::after {
     .hamburger .bar_3 {
         height: 8px;
         border-radius: 2px;
-        width: 50%;
+        width: 100%;
         position: absolute;
         background-color: white;
         bottom: 5px;
@@ -250,6 +336,20 @@ nav a:hover::after {
     .hamburger .unchecked_3 {
         animation: hamburger_3_r 0.5s forwards ease-in-out;
     }
+
+    nav {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(15,15,15,1);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
 }
 
 
@@ -257,7 +357,7 @@ nav a:hover::after {
 
 
  .mod {
-	 position: fixed;
+	 position: absolute;
 	 top: 0px;
 	 left: 0px;
 	 width: 100%;
